@@ -1,0 +1,191 @@
+/* Stiluri existente */
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    border: 1px solid #dadce0;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.google-logo {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.box h2 {
+    margin: 0px 0 -0.125rem;
+    padding: 0;
+    color: #202124;
+    text-align: center;
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.box p {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .1px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.box .inputBox {
+    position: relative;
+    margin-bottom: 1.875rem;
+}
+
+.box .inputBox input {
+    width: 100%; /* Asigură că input-ul se extinde pe întreaga lățime a casetei */
+    padding: 0.625rem 10px;
+    font-size: 1rem;
+    letter-spacing: 0.062rem;
+    border: 1px solid #ccc;
+    background: transparent;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding-ul și border-ul în lățime */
+}
+
+.box .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    color: grey;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+    top: -1.125rem;
+    left: 10px;
+    color: #1a73e8;
+    font-size: 0.75rem;
+    background-color: white;
+    height: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.box .inputBox input:focus {
+    outline: none;
+    border: 2px solid #1a73e8;
+}
+
+.box input[type="submit"] {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #1a73e8;
+    padding: 0.625rem 1.25rem;
+    cursor: pointer;
+    border-radius: 0.312rem;
+    font-size: 1rem;
+    width: 100%; /* Lățimea butonului se extinde pentru a umple caseta */
+    max-width: 200px; /* Dimensiunea maximă a butonului */
+    margin-top: 1rem;
+    display: block;
+    text-align: center; /* Centrează textul în buton */
+}
+
+.box input[type="submit"]:hover {
+    background-color: #287ae6;
+    box-shadow: 0 1px 1px 0 rgba(66,133,244,0.45), 0 1px 3px 1px rgba(66,133,244,0.3);
+}
+
+.forgot {
+    margin-top: -20px;
+}
+
+.forgot button {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: .25px;
+    outline: 0;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+    text-align: left;
+    border: 0;
+}
+
+/* Media Queries pentru telefoane mobile */
+@media (max-width: 600px) {
+    .box {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .box h2 {
+        font-size: 20px;
+    }
+
+    .box p {
+        font-size: 14px;
+    }
+
+    .box .inputBox input {
+        padding: 0.5rem 10px;
+    }
+
+    .box input[type="submit"] {
+        font-size: 14px;
+        padding: 0.5rem 1rem;
+        max-width: 200px; /* Dimensiunea maximă a butonului */
+        margin: 1rem auto 0; /* Centrează butonul */
+    }
+
+    .forgot {
+        margin-top: 0;
+        text-align: center;
+    }
+}
+
+
+
+/* Stiluri pentru linkurile de la footer */
+.footer-links {
+    position: fixed; /* Asigură că footer-ul rămâne în partea de jos */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Asigură un fundal alb pentru a separa linkurile de restul paginii */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.875rem;
+    color: #5f6368;
+    box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.footer-links a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
